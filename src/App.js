@@ -52,7 +52,7 @@ import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
         <div className="App" id="app">
           <div id="main-links">
             <Link to="/transactions">Transactions</Link>
-            <Link to="/operations">Operations</Link>
+            <Link to="/operations">New Operation</Link>
             <Link to="/analytics">Analytics</Link>
           </div>
           <div id="container-balance">

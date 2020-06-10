@@ -186,3 +186,7 @@ svg{
 .underLine{
   text-decoration: underline;
 }
+
+tbody p {
+  padding-left: 1%; 
+}
