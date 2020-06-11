@@ -200,6 +200,7 @@ tbody p {
 
   #pie-charts{
     display: flow-root;
+    grid-template-columns: repeat(1, 1fr);
   }
 
   svg{
