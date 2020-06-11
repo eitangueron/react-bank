@@ -39,7 +39,7 @@ import '../../node_modules/materialize-css/dist/css/materialize.min.css'
             <h2 id="greeting">{gretting}</h2>
             <p id="quote">{this.state.quote.text}</p>
             <p id="author">~{this.state.quote.author}~</p>
-            <p id="welcome-balance"><b>Current balance:</b> ${this.props.balance}</p>
+            <p id="welcome-balance"><b>Current balance:</b> ₪{this.props.balance}</p>
             <Link to="/transactions"><a class="waves-effect waves-light btn" id="welcome1">All Transactions</a></Link>
             <Link to="/operations"><a class="waves-effect waves-light btn" id="welcome2">New Operation</a></Link>
         </div>)

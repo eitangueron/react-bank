@@ -31,7 +31,10 @@ import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
     reducer = (accumulator, currentValue) => accumulator + currentValue;
 
     addTransaction = async (amount, vendor, category) => {
-      const response = await axios.post(`http://localhost:4000/transaction`,{amount, vendor, category})
+      const now = new Date()
+      const time = now.getHours() + ':' + now.getMinutes()
+      const date = now.getDate() + '/' + (parseInt(now.getMonth())+1) +'/' +now.getFullYear()
+      const response = await axios.post(`http://localhost:4000/transaction`,{amount, vendor, category,date,time})
       const newTransactions = [...this.state.transactions]
       newTransactions.push(response.data)
       this.setState({transactions:newTransactions})
@@ -56,7 +59,7 @@ import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
             <Link to="/analytics">Analytics</Link>
           </div>
           <div id="container-balance">
-            <p id="balance"><b>Current balance:</b> ${balance}</p>
+            <p id="balance"><b>Current balance:</b> ₪{balance}</p>
           </div>
             <Route path="/" exact render={() => <Landing balance={balance}/>}/>
             <Route path="/transactions" exact render={() => <Transactions data={this.state.transactions} deleteAction={this.deleteAction}/>} ></Route>

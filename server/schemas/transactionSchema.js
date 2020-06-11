@@ -5,7 +5,9 @@ const Schema = mongoose.Schema
 const transactionSchema = new Schema ({
     category: String,
     vendor: String,
-    amount: Number
+    amount: Number,
+    date:String,
+    time:String
 })
 
 const Transaction = mongoose.model('Transaction',transactionSchema)

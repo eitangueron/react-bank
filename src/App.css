@@ -1,9 +1,3 @@
-/* #app{ */
-  /* display: grid;
-  grid-template-areas: 
-  "b b"
-  "a o";
-} */
 
 #total-balance{
   grid-area: b;
@@ -189,4 +183,39 @@ svg{
 
 tbody p {
   padding-left: 1%; 
+}
+
+
+
+@media (max-width: 678px) {
+  #main-links{
+    grid-template-columns: repeat(1, 1fr);
+    padding-top: 2px;
+    font-size: 28px;
+  }
+
+  #main-links a{
+    padding-bottom: 2px;
+  }
+
+  #pie-charts{
+    display: flow-root;
+  }
+
+  svg{
+    margin-left: 0px;
+  }
+
+  #operations input{
+    width: 60%;
+  }
+
+  #operations a{
+    margin-top: 3%;
+    margin-bottom: 0%;
+  }
+
+  #sums h2{
+    font-size: 3rem;
+  }
 }
