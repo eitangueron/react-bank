@@ -13,7 +13,7 @@ import '../../node_modules/materialize-css/dist/css/materialize.min.css'
     }
 
     async getQuote ()  {
-        const response = await axios.get("http://localhost:4000/quote")
+        const response = await axios.get("/quote")
         return response.data
       }
     

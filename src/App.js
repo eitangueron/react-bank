@@ -19,7 +19,7 @@ import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
     }
 
     async getTransactions() {
-      return axios.get("http://localhost:4000/transactions")
+      return axios.get("/transactions")
     }
 
   
@@ -34,14 +34,14 @@ import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
       const now = new Date()
       const time = now.getHours() + ':' + now.getMinutes()
       const date = now.getDate() + '/' + (parseInt(now.getMonth())+1) +'/' +now.getFullYear()
-      const response = await axios.post(`http://localhost:4000/transaction`,{amount, vendor, category,date,time})
+      const response = await axios.post(`/transaction`,{amount, vendor, category,date,time})
       const newTransactions = [...this.state.transactions]
       newTransactions.push(response.data)
       this.setState({transactions:newTransactions})
     }
 
     deleteAction = async (actionData) => {
-      const response = await axios.delete(`http://localhost:4000/transaction/${actionData.amount}/${actionData.vendor}/${actionData.category}`)
+      const response = await axios.delete(`/transaction/${actionData.amount}/${actionData.vendor}/${actionData.category}`)
       const indexToDelete = this.state.transactions.findIndex(a => a._id===response.data._id)
       const updatedTransactions = [...this.state.transactions]
       updatedTransactions.splice(indexToDelete, 1)
