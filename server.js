@@ -1,5 +1,5 @@
 const express = require("express");
-// const path = require("path");
+const path = require("path");
 const bodyParser = require(`body-parser`)
 const mongoose = require(`mongoose`)
 const api = require(`./server/routes/api`)
@@ -19,8 +19,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 app.use(express.static(path.join(__dirname, 'build')));
 
-// app.use(express.static(path.join(__dirname, 'dist')))
-// app.use(express.static(path.join(__dirname, 'node_modules')))
+
 app.use(`/`, api)
 
 
