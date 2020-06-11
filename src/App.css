@@ -72,7 +72,7 @@
 
 #welcome{
   text-align: center;
-  margin-top: 100px;
+  margin-top: 60px;
 }
 
 #welcome button{
@@ -219,8 +219,17 @@ tbody p {
   #sums h2{
     font-size: 3rem;
   }
-}
 
-#welcome a{
-  margin-top: 2%;
+  #welcome{
+    margin-top: 0px;
+  }
+  
+  #welcome a{
+    margin-top: 3%;
+  }
+  
+  #welcome-balance{
+    display: inline;
+  }
+
 }
