@@ -16,6 +16,8 @@ import '../../node_modules/materialize-css/dist/css/materialize.min.css'
     }
 
     updateInput = (event) => {
+      // const key = event.target.name
+      // this.setState({[key]:event.target.value})
       if(event.target.name === 'category-input'){
         this.setState({categoryInput:event.target.value})
       } else if(event.target.name === 'vendor-input'){
