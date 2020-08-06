@@ -31,7 +31,7 @@ Otherwise:
 ## Screenshots
 
 ### Landing Page
-A landing page greeting the users, includs a random quote (From Random quotes API).
+A landing page greeting the users, includes a random quote (From Random quotes API).
 
 <p align="center"><img src="imgs4readme/landingPage.png" width="500" /></p>
 
